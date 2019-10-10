@@ -4,3 +4,4 @@ type
   Player* = object
     name*: string
     hand*: array[2, Card]
+    bet*: Bets
