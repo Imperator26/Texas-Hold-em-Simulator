@@ -1,5 +1,5 @@
 import player
-import card
+import cards
 
 const NO_PLAYERS = 6
 

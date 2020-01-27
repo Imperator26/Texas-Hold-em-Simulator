@@ -1,5 +1,7 @@
 import random
 
+from game import Rounds
+
 randomize(42)
 
 type
@@ -28,6 +30,19 @@ type
     csHearts = "♡"
     csSpades = "♤"
 
+  HandValues = enum
+    Highcard
+    Pair
+    TwoPairs
+    ThreeOfAKind
+    Straight
+    Flush
+    FullHouse
+    FourOfAKind
+    StraightFlush
+    RoyalFlush
+
+
 proc shuffle_cards*(deck: var array[52, Card]): array[52, Card] =
   var i: int = 0
 
@@ -49,3 +64,34 @@ proc shuffle_cards*(deck: var array[52, Card]): array[52, Card] =
     deck[j].suit = suit
 
   return deck
+
+proc evaluateHand*(
+  hand: array[2, Card],
+  community_cards: array[5, Card],
+  round: Rounds
+): HandValues =
+
+  # Royal Flush
+  if round >= Flop:
+    
+    if
+
+  # Straight Flush
+
+  # Four of a Kind
+
+  # Full House
+
+  # Flush
+
+  # Straight
+
+  # Three of a Kind
+
+ # Two Pairs
+
+ # Pair
+
+ # High Card
+
+ return

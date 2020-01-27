@@ -1,4 +1,4 @@
-import card
+import cards
 
 type
   Player* = object
